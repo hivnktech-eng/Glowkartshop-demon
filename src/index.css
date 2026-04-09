@@ -81,6 +81,18 @@ button {
   }
 }
 
+@media (max-width: 420px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.85rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Skeleton animation */
 @keyframes skeleton-ripple {
   0% { transform: translateX(-100%); }

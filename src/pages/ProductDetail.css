@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  min-width: 0;
 }
 
 .detail-category {
@@ -65,6 +66,23 @@
   font-size: 3.5rem;
   line-height: 1.1;
   letter-spacing: -1px;
+}
+
+.detail-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.detail-rating-stars {
+  display: flex;
+}
+
+.detail-rating-text {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
 }
 
 .detail-price {
@@ -94,6 +112,14 @@
   gap: 0.8rem;
 }
 
+.spec-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
+  flex-shrink: 0;
+}
+
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -117,16 +143,144 @@
 .add-to-cart-section {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn-add-cart {
   flex: 1;
   justify-content: center;
+  min-width: 220px;
+}
+
+.qty-value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.detail-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 992px) {
+  .product-detail-page {
+    padding-top: calc(var(--header-height) + 2.5rem);
+    padding-bottom: 6rem;
+  }
+
   .product-detail-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .detail-title {
+    font-size: 2.8rem;
+  }
+
+  .spec-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail-page {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 5rem;
+  }
+
+  .product-detail-grid {
+    gap: 2.5rem;
+  }
+
+  .product-gallery {
+    gap: 1rem;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .product-main-info {
+    gap: 1.4rem;
+  }
+
+  .detail-title {
+    font-size: 2.1rem;
+  }
+
+  .detail-price {
+    font-size: 1.45rem;
+  }
+
+  .detail-desc {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .add-to-cart-section {
+    gap: 0.85rem;
+  }
+
+  .quantity-selector {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem;
+  }
+
+  .btn-add-cart {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .add-to-cart-section .icon-btn {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-benefits {
+    margin-top: 0.75rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .detail-title {
+    font-size: 1.8rem;
+  }
+
+  .detail-rating-row {
+    gap: 0.5rem;
+  }
+
+  .detail-rating-text {
+    font-size: 0.8rem;
+  }
+
+  .spec-list {
+    padding: 1.25rem 0;
+  }
+
+  .spec-item {
+    font-size: 0.82rem;
+    gap: 0.55rem;
+  }
+
+  .qty-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .thumb-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

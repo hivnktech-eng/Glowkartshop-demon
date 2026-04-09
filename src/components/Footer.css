@@ -91,12 +91,31 @@
 }
 
 @media (max-width: 576px) {
+  .footer {
+    padding: 4rem 0 2.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
+
+  .footer-about p {
+    max-width: none;
+  }
+
+  .social-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .footer-bottom {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     text-align: center;
+    padding-top: 2rem;
+    font-size: 0.74rem;
   }
 }

@@ -56,7 +56,7 @@ const Shop = ({ category: initialCategory }) => {
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="section-subtitle">Collection</span>
-            <h1 className="elegant-font" style={{ fontSize: "3.5rem" }}>
+            <h1 className="elegant-font shop-title">
               {selectedCategory === "All"
                 ? "The Entire Spectrum"
                 : selectedCategory}
@@ -110,15 +110,7 @@ const Shop = ({ category: initialCategory }) => {
                 onChange={(e) => setPriceRange(Number(e.target.value))}
                 style={{ width: "100%", accentColor: "black" }}
               />
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  fontSize: "0.8rem",
-                  marginTop: "0.5rem",
-                  color: "var(--color-text-muted)",
-                }}
-              >
+              <div className="price-range-meta">
                 <span>₹0</span>
                 <span>₹100000</span>
               </div>
@@ -128,7 +120,7 @@ const Shop = ({ category: initialCategory }) => {
           {/* Main Content */}
           <main className="shop-content">
             <div className="shop-controls">
-              <div style={{ position: "relative", flex: 1, maxWidth: "400px" }}>
+              <div className="shop-search-wrap">
                 <Search
                   size={18}
                   style={{
@@ -153,9 +145,7 @@ const Shop = ({ category: initialCategory }) => {
                 />
               </div>
 
-              <div
-                style={{ display: "flex", gap: "2rem", alignItems: "center" }}
-              >
+              <div className="shop-sort-wrap">
                 <span className="result-count">
                   {filteredProducts.length} items
                 </span>
@@ -196,7 +186,7 @@ const Shop = ({ category: initialCategory }) => {
                   onClick={() => {
                     setSelectedCategory("All");
                     setSearchQuery("");
-                    setPriceRange(2000);
+                    setPriceRange(100000);
                   }}
                   className="btn-secondary"
                   style={{ marginTop: "2rem" }}

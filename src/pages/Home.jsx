@@ -93,77 +93,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services/Features Section */}
-      <section className="features-section">
-        <div className="container">
-          <div className="features-shell">
-            <motion.div
-              initial={{ opacity: 0, x: -35 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="features-intro"
-            >
-              <span className="section-subtitle">Why Glowkart</span>
-              <h2 className="section-title">Engineered for Excellence</h2>
-              <p className="features-lead">
-                Every product goes through rigorous performance validation,
-                material stress checks, and compatibility tuning before it
-                reaches your desk.
-              </p>
-              <div className="features-pill-grid">
-                {servicePillars.map((pillar) => (
-                  <div key={pillar.label} className="features-pill">
-                    <span className="features-pill-icon">{pillar.icon}</span>
-                    <span>{pillar.label}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <div className="features-grid">
-              {features.map((item, i) => (
-                <motion.article
-                  key={i}
-                  initial={{ opacity: 0, y: 38 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  whileHover={{ y: -8 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{
-                    opacity: { duration: 0.55, delay: i * 0.14 },
-                    y: { duration: 0.55, delay: i * 0.14 },
-                    default: { type: "spring", stiffness: 240, damping: 22 },
-                  }}
-                  className="feature-card"
-                >
-                  <div className="feature-card-top">
-                    <div className="feature-icon-wrap">{item.icon}</div>
-                    <span className="feature-index">0{i + 1}</span>
-                  </div>
-
-                  <div className="feature-content">
-                    <h3 className="feature-title">{item.title}</h3>
-                    <p className="feature-desc">{item.desc}</p>
-                  </div>
-
-                  <div className="feature-stat">
-                    <div className="feature-stat-meta">
-                      <span className="feature-stat-value elegant-font">
-                        {item.stat}
-                      </span>
-                      <span className="feature-stat-label">
-                        {item.statLabel}
-                      </span>
-                    </div>
-                    <ArrowRight size={18} className="feature-stat-arrow" />
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Category Section */}
       <section className="category-section">
         <div className="container">
@@ -187,10 +116,7 @@ const Home = () => {
                 <p style={{ marginBottom: "2rem", opacity: 0.8 }}>
                   Precision tools for your digital workspace.
                 </p>
-                <span
-                  className="btn-secondary"
-                  style={{ color: "white", borderColor: "white" }}
-                >
+                <span className="btn-secondary category-cta-btn">
                   View Collection
                 </span>
               </div>
@@ -210,10 +136,7 @@ const Home = () => {
                 <p style={{ marginBottom: "2rem", opacity: 0.8 }}>
                   Experience the next generation of play.
                 </p>
-                <span
-                  className="btn-secondary"
-                  style={{ color: "white", borderColor: "white" }}
-                >
+                <span className="btn-secondary category-cta-btn">
                   View Collection
                 </span>
               </div>

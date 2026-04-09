@@ -183,3 +183,91 @@
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
 }
+
+@media (hover: none) {
+  .wishlist-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .quick-view-overlay {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.38), transparent);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-image-container {
+    margin-bottom: 1rem;
+  }
+
+  .badge-tag {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.62rem;
+    padding: 0.32rem 0.7rem;
+  }
+
+  .wishlist-btn {
+    width: 36px;
+    height: 36px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .quick-view-overlay {
+    padding: 0.85rem;
+  }
+
+  .btn-quick-view {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+
+  .cart-controls-inline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .product-price-row {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .wishlist-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .cart-ctrl-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cart-qty-display {
+    min-width: 30px;
+    font-size: 0.82rem;
+  }
+
+  .product-category {
+    font-size: 0.68rem;
+  }
+
+  .product-price {
+    font-size: 0.92rem;
+  }
+
+  .product-cart-badge {
+    font-size: 0.62rem;
+    padding: 0.2rem 0.58rem;
+  }
+}

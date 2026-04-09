@@ -5,7 +5,6 @@ import {
   Minus,
   Plus,
   Heart,
-  Share2,
   Shield,
   Truck,
   RotateCcw,
@@ -68,7 +67,7 @@ const ProductDetail = () => {
               key={activeImg}
               className="main-image"
             >
-              <img src={product.images[0]} alt={product.name} />
+              <img src={product.images[activeImg]} alt={product.name} />
             </motion.div>
             <div className="thumb-grid">
               {product.images.map((img, i) => (
@@ -96,15 +95,8 @@ const ProductDetail = () => {
             <div className="info-header">
               <span className="detail-category">{product.category}</span>
               <h1 className="detail-title elegant-font">{product.name}</h1>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
-                  marginTop: "1rem",
-                }}
-              >
-                <div style={{ display: "flex" }}>
+              <div className="detail-rating-row">
+                <div className="detail-rating-stars">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -114,12 +106,7 @@ const ProductDetail = () => {
                     />
                   ))}
                 </div>
-                <span
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "var(--color-text-muted)",
-                  }}
-                >
+                <span className="detail-rating-text">
                   ({product.reviews} customer reviews)
                 </span>
               </div>
@@ -134,14 +121,7 @@ const ProductDetail = () => {
             <div className="spec-list">
               {product.specs.map((spec, i) => (
                 <div key={i} className="spec-item">
-                  <div
-                    style={{
-                      width: "8px",
-                      height: "8px",
-                      borderRadius: "50%",
-                      background: "black",
-                    }}
-                  ></div>
+                  <div className="spec-dot"></div>
                   {spec}
                 </div>
               ))}
@@ -155,15 +135,7 @@ const ProductDetail = () => {
                 >
                   <Minus size={16} />
                 </button>
-                <span
-                  style={{
-                    minWidth: "30px",
-                    textAlign: "center",
-                    fontWeight: "600",
-                  }}
-                >
-                  {quantity}
-                </span>
+                <span className="qty-value">{quantity}</span>
                 <button
                   className="qty-btn"
                   onClick={() => setQuantity(quantity + 1)}
@@ -193,14 +165,7 @@ const ProductDetail = () => {
               </button>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "1.5rem",
-                marginTop: "2rem",
-              }}
-            >
+            <div className="detail-benefits">
               <div
                 className="spec-item"
                 style={{ color: "var(--color-text-muted)" }}
