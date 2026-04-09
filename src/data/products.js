@@ -1,12 +1,16 @@
+import gauguletImg from "../assets/products/gaunglet.webp";
+import droneImg from "../assets/products/drone.jpg";
+import accessoriesImg from "../assets/categories/accessories.png";
+
 export const products = [
   {
     id: 1,
     name: "Nebula Gauntlet X1",
     category: "Accessories",
-    price: 249.0,
+    price: 20667,
     description:
       "A haptic feedback gaming glove with aerospace-grade sensors and minimalist matte finish.",
-    images: ["src/assets/products/gaunglet.webp"],
+    images: [gauguletImg],
     rating: 4.8,
     reviews: 124,
     stock: 15,
@@ -17,10 +21,10 @@ export const products = [
     id: 2,
     name: "Onyx Drone S7",
     category: "Electronic Toys",
-    price: 899.0,
+    price: 74717,
     description:
       "Carbon fiber foldable drone with 8K thermal imaging and silent stealth rotors.",
-    images: ["src/assets/products/drone.jpg"],
+    images: [droneImg],
     rating: 4.9,
     reviews: 86,
     stock: 5,
@@ -31,10 +35,10 @@ export const products = [
     id: 3,
     name: "Titanium Link Cable",
     category: "Accessories",
-    price: 59.0,
+    price: 4897,
     description:
       "Indestructible braided titanium-core USB-C cable for high-speed data transfer.",
-    images: ["src/assets/categories/accessories.png"],
+    images: [accessoriesImg],
     rating: 5.0,
     reviews: 210,
     stock: 50,
@@ -44,7 +48,7 @@ export const products = [
     id: 4,
     name: "Zenith VR Visor",
     category: "Accessories",
-    price: 599.0,
+    price: 49717,
     description:
       "Ultra-lightweight VR headset with 120Hz OLED display and spatial audio.",
     images: [
@@ -59,7 +63,7 @@ export const products = [
     id: 5,
     name: "AeroBot Companion",
     category: "Electronic Toys",
-    price: 349.0,
+    price: 28967,
     description:
       "AI-powered desktop companion with emotional intelligence and smart home control.",
     images: [
@@ -75,7 +79,7 @@ export const products = [
     id: 6,
     name: "Cyber Deck Keyboard",
     category: "Accessories",
-    price: 299.0,
+    price: 24817,
     description:
       "Mechanical keyboard with transparent keycaps and programmable OLED screen.",
     images: [

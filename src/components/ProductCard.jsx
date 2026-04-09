@@ -95,7 +95,9 @@ const ProductCard = ({ product, variant = "" }) => {
           <h3 className="product-name elegant-font">{product.name}</h3>
         </Link>
         <div className="product-price-row">
-          <p className="product-price">${product.price.toFixed(2)}</p>
+          <p className="product-price">
+            ₹{product.price.toLocaleString("en-IN")}
+          </p>
           {isInCart && (
             <span className="product-cart-badge">
               In Cart · {cartItem.quantity}
