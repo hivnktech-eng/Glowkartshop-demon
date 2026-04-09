@@ -13,11 +13,10 @@ import {
 } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
+import heroImg from "../assets/hero/hero.png";
+import accessoriesImg from "../assets/categories/accessories.png";
+import toysImg from "../assets/categories/toys.avif";
 import "./Home.css";
-
-const HERO_IMG = "src/assets/hero/hero.png";
-const ACCESSORIES_IMG = "src/assets/categories/accessories.png";
-const TOYS_IMG = "src/assets/categories/toys.avif";
 
 const Home = () => {
   const featuredProducts = products.slice(0, 3);
@@ -65,7 +64,7 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <img src={HERO_IMG} className="hero-img-bg" alt="Glowkart Hero" />
+        <img src={heroImg} className="hero-img-bg" alt="Glowkart Hero" />
         <div className="hero-overlay" />
         <div className="container">
           <motion.div
@@ -171,7 +170,7 @@ const Home = () => {
           <div className="category-grid">
             <Link to="/accessories" className="category-card">
               <img
-                src={ACCESSORIES_IMG}
+                src={accessoriesImg}
                 className="category-img"
                 alt="Accessories"
               />
@@ -197,7 +196,7 @@ const Home = () => {
               </div>
             </Link>
             <Link to="/toys" className="category-card">
-              <img src={TOYS_IMG} className="category-img" alt="Toys" />
+              <img src={toysImg} className="category-img" alt="Toys" />
               <div className="category-content">
                 <span
                   className="section-subtitle"
