@@ -1,0 +1,98 @@
+.shop-page {
+  padding-top: var(--header-height);
+  padding-bottom: 10rem;
+}
+
+.shop-header {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 4rem;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+}
+
+.filters-sidebar h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.filter-group {
+  margin-bottom: 3rem;
+}
+
+.filter-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-option:hover {
+  color: var(--color-accent);
+}
+
+.filter-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-accent);
+}
+
+.shop-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.result-count {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.sort-select {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.no-results {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+@media (max-width: 992px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+  .filters-sidebar {
+    display: none; /* Can implement a drawer for mobile later */
+  }
+}

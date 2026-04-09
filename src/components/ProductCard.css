@@ -1,0 +1,185 @@
+.product-card {
+  position: relative;
+  background: var(--color-bg);
+  transition: var(--transition-smooth);
+}
+
+.product-image-container {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: var(--radius-soft);
+  background: var(--color-bg-alt);
+  margin-bottom: 1.5rem;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.badge-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--color-accent);
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-pill);
+  z-index: 10;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-luxury);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: var(--transition-smooth);
+}
+
+.wishlist-btn.wishlist-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:hover .wishlist-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay for add-to-cart / cart controls */
+.quick-view-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.25), transparent);
+  transform: translateY(100%);
+  transition: var(--transition-smooth);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.product-card:hover .quick-view-overlay {
+  transform: translateY(0);
+}
+
+/* Keep cart controls always visible when product is in cart */
+.quick-view-overlay.cart-controls-visible {
+  transform: translateY(0);
+  background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+}
+
+.btn-quick-view {
+  background: white;
+  color: var(--color-accent);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-luxury);
+  transition: var(--transition-smooth);
+}
+
+.btn-quick-view:hover {
+  transform: scale(1.05);
+}
+
+/* Inline cart controls (qty +/- and remove) */
+.cart-controls-inline {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-luxury);
+  overflow: hidden;
+}
+
+.cart-ctrl-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.cart-ctrl-btn:hover {
+  background: var(--color-bg-alt);
+}
+
+.cart-qty-display {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  user-select: none;
+}
+
+/* Product Info */
+.product-info {
+  text-align: left;
+}
+
+.product-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.product-price-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.product-cart-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-accent);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
